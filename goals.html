@@ -1,0 +1,196 @@
+Add the information in this html and give a final LTV Website: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legions Technical Varsity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a1e;
+            color: #e0e7ff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #a1c4fd;
+            transform: translateY(-2px);
+        }
+        .section {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            background: rgba(20, 20, 40, 0.9);
+            border-radius: 1rem;
+        }
+        /* Starfield Background */
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+        /* Planet Silhouettes */
+        .planet {
+            position: absolute;
+            background: radial-gradient(circle, rgba(100, 100, 150, 0.3), transparent);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .planet-1 { width: 300px; height: 300px; top: 10%; left: 5%; }
+        .planet-2 { width: 200px; height: 200px; bottom: 20%; right: 10%; }
+        /* Custom Colors */
+        .bg-navy-900 { background-color: #0a0a1e; }
+        .text-navy-900 { color: #0a0a1e; }
+        .text-navy-600 { color: #4f5bff; }
+        .hover\:text-gold-400:hover { color: #a1c4fd; }
+        .text-gray-700 { color: #d0d7ff; }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Starfield and Planets -->
+    <div class="starfield">
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+    </div>
+
+    <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="LTV.png" alt="Legions Technical Varsity Logo" class="w-12 h-12 mr-4">
+                <h1 class="text-2xl font-bold">Legions Technical Varsity</h1>
+            </div>
+            <nav class="flex gap-6">
+                <a href="#goals" class="nav-link text-white hover:text-gold-400">Goals</a>
+                <a href="#vision" class="nav-link text-white hover:text-gold-400">Vision</a>
+                <a href="#services" class="nav-link text-white hover:text-gold-400">Services</a>
+                <a href="#projects" class="nav-link text-white hover:text-gold-400">Projects</a>
+                <a href="#team" class="nav-link text-white hover:text-gold-400">Team</a>
+                <a href="#contact" class="nav-link text-white hover:text-gold-400">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-navy-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Coding The Nearest Future</h2>
+            <p class="text-lg max-w-2xl mx-auto">Empowering Africa through innovative technology, sustainable solutions, and world-class education.</p>
+        </div>
+    </section>
+
+    <section id="goals" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-white mb-6">Our Goals</h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Short-Term: Innovate, build, and launch tech solutions in South Africa.</li>
+                <li>Long-Term: Foster a successful African continent through technological innovation.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="vision" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-white mb-6">Our Vision</h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Recycle air pollution in exchange for energy.</li>
+                <li>Research sustainable energy solutions (excluding weaponized or nuclear uses).</li>
+                <li>Empower youth in science and technology.</li>
+                <li>Create new methods of oxygen generation using futuristic chemistry.</li>
+                <li>Become the global center for innovation in education.</li>
+                <li>Send students into space to experiment with future energy technologies.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="services" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-white mb-6">Our Services</h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Tech Research & Development</li>
+                <li>STEM Education Programs</li>
+                <li>Clean Energy Innovations</li>
+                <li>AI & Robotics Workshops</li>
+                <li>Space-Tech Collaborations</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-white mb-6">Highlighted Projects</h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                <li>AI-Powered Pollution Converter</li>
+                <li>Zero-Emission Campus Energy Grid</li>
+                <li>Orbital Classroom Initiative</li>
+                <li>Code4Africa Bootcamp</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="team" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-white mb-6">Our Team</h2>
+            <p class="text-gray-700">A diverse group of engineers, scientists, and educators shaping tomorrow’s Africa. We are united by innovation and driven by a passion for the future.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-white mb-6">Contact Us</h2>
+            <p class="text-gray-700">Email: <a href="mailto:info@legionstechvarsity.africa" class="text-navy-600 hover:text-gold-400">info@legionstechvarsity.africa</a></p>
+            <p class="text-gray-700">Phone: <a href="tel:+271234567890" class="text-navy-600 hover:text-gold-400">+27 123 456 7890</a></p>
+            <p class="text-gray-700">Address: Innovation Park, Cape Town, South Africa</p>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2026 Legions Technical Varsity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Generate stars dynamically
+        const starfield = document.querySelector('.starfield');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = `${Math.random() * 2 + 1}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 3}s`;
+            starfield.appendChild(star);
+        }
+    </script>
+</body>
+</html>
