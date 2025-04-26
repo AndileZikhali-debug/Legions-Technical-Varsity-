@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legions Technical Varsity - Strategy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a1e;
+      color: #e0e7ff;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .nav-link {
+      transition: color 0.3s ease, transform 0.3s ease;
+      position: relative;
+    }
+    .nav-link:hover {
+      color: #a1c4fd;
+      transform: translateY(-2px);
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #a1c4fd;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .section {
+      background: rgba(20, 20, 40, 0.9);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 1rem 0;
+      min-height: 100vh;
+    }
+    /* Starfield Background */
+    .starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .star {
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+    /* Planet Silhouettes */
+    .planet {
+      position: absolute;
+      background: radial-gradient(circle, rgba(100, 100, 150, 0.3), transparent);
+      border-radius: 50%;
+      opacity: 0.2;
+    }
+    .planet-1 { width: 300px; height: 300px; top: 10%; left: 5%; }
+    .planet-2 { width: 200px; height: 200px; bottom: 20%; right: 10%; }
+    /* Custom Colors */
+    .bg-navy-900 { background-color: #0a0a1e; }
+    .text-navy-600 { color: #4f5bff; }
+    .hover\:text-gold-400:hover { color: #a1c4fd; }
+    .text-gray-700 { color: #d0d7ff; }
+    /* Placeholder for Additional Background Images */
+    .section-bg-placeholder {
+      height: 400px;
+      background: rgba(255, 255, 255, 0.05);
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #888;
+      border: 1px solid rgba(79, 91, 255, 0.2);
+      border-radius: 10px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(79, 91, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(79, 91, 255, 0.4);
+    }
+    footer {
+      background: #0a0a1e;
+      padding: 1.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(79, 91, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Starfield and Planets -->
+  <div class="starfield">
+    <div class="planet planet-1"></div>
+    <div class="planet planet-2"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="/mnt/data/file-GuttCPk8ts4ERqJW8ra2r5" alt="Legions Technical Varsity Logo" class="w-12 h-12 mr-4">
+        <h1 class="text-2xl font-bold">Legions Technical Varsity</h1>
+      </div>
+      <nav class="flex gap-6">
+        <a href="index.html" class="nav-link text-white hover:text-gold-400">Home</a>
+        <a href="about.html" class="nav-link text-white hover:text-gold-400">About</a>
+        <a href="goals.html" class="nav-link text-white hover:text-gold-400">Goals</a>
+        <a href="vision.html" class="nav-link text-white hover:text-gold-400">Vision</a>
+        <a href="services.html" class="nav-link text-white hover:text-gold-400">Services</a>
+        <a href="projects.html" class="nav-link text-white hover:text-gold-400">Projects</a>
+        <a href="strategy.html" class="nav-link text-white hover:text-gold-400">Strategy</a>
+        <a href="team.html" class="nav-link text-white hover:text-gold-400">Team</a>
+        <a href="contact.html" class="nav-link text-white hover:text-gold-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Business Strategy Section (Business Model & Competitive Advantage) -->
+  <section class="section py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-white mb-6 text-center animate-section">Business Strategy</h2>
+      <div class="card p-6 mb-6">
+        <h3 class="text-2xl font-semibold text-white mb-4">Business Model</h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>B2G (Business-to-Government) – Partnering with municipalities for smart city projects.</li>
+          <li>B2B (Business-to-Business) – Selling robotics and energy solutions to industries.</li>
+          <li>B2C (Business-to-Consumer) – Affordable tech education and home energy solutions.</li>
+          <li>Grants & Investments – Securing funding for R&D from green energy and tech grants.</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-2xl font-semibold text-white mb-4">Competitive Advantage</h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>Localized Solutions – Designed specifically for Southern Africa’s challenges.</li>
+          <li>Youth-Centric Approach – Building a skilled workforce to sustain innovations.</li>
+          <li>Sustainability Focus – Zero-waste energy models and eco-friendly tech.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder for Additional Background Images -->
+  <div class="section-bg-placeholder">
+    Space for Additional Background Image
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Legions Technical Varsity. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Generate stars dynamically
+    const starfield = document.querySelector('.starfield');
+    for (let i = 0; i < 200; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.width = `${Math.random() * 2 + 1}px`;
+      star.style.height = star.style.width;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 3}s`;
+      starfield.appendChild(star);
+    }
+
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('.animate-section', {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.animate-section',
+        start: 'top 80%',
+        toggleActions: 'play none none reset'
+      }
+    });
+
+    gsap.utils.toArray('.card').forEach(card => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%',
+          toggleActions: 'play none none reset'
+        }
+      });
+    });
+  </script>
+</body>
+</html>
